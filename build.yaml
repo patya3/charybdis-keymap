@@ -5,6 +5,8 @@ include:
     artifact-name: charybdis_left
   - board: nice_nano_v2
     shield: charybdis_right
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: charybdis_right
   - board: nice_nano_v2
     shield: settings_reset
