@@ -17,7 +17,7 @@
     /* trackball as cursor on base layer */
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
-        device = <&vtrackball>;
+        device = <&trackball>;
         layers = <Base>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
@@ -29,7 +29,7 @@
     /* trackball slowed down on mouse layer (snipe) */
     trackball_snipe_listener {
         compatible = "zmk,input-behavior-listener";
-        device = <&vtrackball>;
+        device = <&trackball>;
         layers = <Mouse>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
@@ -41,7 +41,7 @@
     /* trackball as scroll wheel on scroll layer */
     trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
-        device = <&vtrackball>;
+        device = <&trackball>;
         layers = <Scroll>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_MISC>;
