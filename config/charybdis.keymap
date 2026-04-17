@@ -16,12 +16,26 @@
 #define THUMBS 48 49 50 51 52 53 54 55
 
 / {
-    /* trackball as cursor on base layer */
+    /* trackball as cursor — auto-activates Nav layer on movement */
 
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&trackball>;
         layers = <Base>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        scale-multiplier = <1>;
+        scale-divisor = <2>;
+        bindings = <&ib_tog_nav>;
+    };
+
+    /* keep trackball working as cursor on the Nav layer itself */
+
+    trackball_nav_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&trackball>;
+        layers = <4>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -60,6 +74,14 @@
         #binding-cells = <2>;
         evt-type = <INPUT_EV_REL>;
         input-code = <INPUT_REL_WHEEL>;
+    };
+
+    ib_tog_nav: ib_tog_nav {
+        compatible = "zmk,input-behavior-tog-layer";
+        #binding-cells = <0>;
+        time-to-live-ms = <750>;
+        usage-pages = <HID_USAGE_GD>;
+        bindings = <&tog 4>;
     };
 
     macros {
