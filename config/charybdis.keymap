@@ -27,7 +27,7 @@
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <1>;
         scale-divisor = <1>;
-        bindings = <&ib_tog_nav>;
+        bindings = <&ib_tog_nav 4>;
     };
 
     /* keep trackball working as cursor on the Nav layer itself */
@@ -78,10 +78,8 @@
 
     ib_tog_nav: ib_tog_nav {
         compatible = "zmk,input-behavior-tog-layer";
-        #binding-cells = <0>;
+        #binding-cells = <1>;
         time-to-live-ms = <750>;
-        usage-pages = <HID_USAGE_GD>;
-        bindings = <&tog 4>;
     };
 
     macros {
