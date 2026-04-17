@@ -128,7 +128,7 @@
         Base {
             label = "BASE";
             bindings = <
-&kp ESC        &kp N1        &kp N2       &kp N3       &kp N4        &kp N5        &kp N6     &kp N7        &kp N8       &kp N9       &kp N0           &to 1
+&kp ESC        &kp N1        &kp N2       &kp N3       &kp N4        &kp N5        &kp N6     &kp N7        &kp N8       &kp N9       &kp N0           &tog 1
 &kp TAB        &kp Q         &kp W        &kp E        &kp R         &kp T         &kp Y      &kp U         &kp I        &kp O        &kp P            &kp GRAVE
 &kp BACKSPACE  &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G         &kp H      &hmr RSHFT J  &hmr RGUI K  &hmr RALT L  &hmr RCTRL SEMI  &kp DEL
 &kp LSHFT      &kp Z         &kp X        &kp C        &kp V         &kp B         &kp N      &kp M         &kp COMMA    &kp DOT      &kp FSLH         &kp SINGLE_QUOTE
@@ -164,12 +164,12 @@
         FNNum {
             label = "FNNUM";
             bindings = <
-&trans  &trans   &kp PAGE_DOWN  &trans  &kp PAGE_UP  &trans      &kp HOME         &kp END          &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp KP_SUBTRACT  &trans
-&trans  &kp F12  &kp F7         &kp F8  &kp F9       &kp CAPS    &kp COMMA        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS      &trans
-&trans  &kp F11  &kp F4         &kp F5  &kp F6       &kp F20     &kp PERIOD       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &trans
-&trans  &kp F10  &kp F1         &kp F2  &kp F3       &kp F21     &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER     &trans
-                                &trans  &trans       &trans      &trans           &trans
-                                        &trans       &trans      &trans
+&trans  &trans   &kp PAGE_DOWN  &trans  &kp PAGE_UP               &trans      &kp HOME         &kp END          &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp KP_SUBTRACT  &kp BACKSPACE
+&trans  &kp F12  &kp F7         &kp F8  &kp F9                    &kp CAPS    &kp COMMA        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS      &trans
+&trans  &kp F11  &kp F4         &kp F5  &kp F6                    &kp F20     &kp PERIOD       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &trans
+&trans  &kp F10  &kp F1         &kp F2  &kp F3                    &kp F21     &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER     &trans
+                                &trans  &kp LS(LG(LC(NUMBER_4)))  &trans      &trans           &trans
+                                        &trans                    &trans      &trans
             >;
         };
 
