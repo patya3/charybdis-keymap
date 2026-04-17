@@ -5,68 +5,28 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define Base   0
-#define Lower  1
-#define Raise  2
-#define Mouse  3
-#define Scroll 4
-#define BT     5
+#define Base    0
+#define Gaming  1
+#define Sym     2
+#define FNNum   3
+#define Nav     4
+#define Lewd    5
 #define KEYS_L 0  1  2  3  4  5  12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41
 #define KEYS_R 6  7  8  9  10 11 18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 46 47
 #define THUMBS 48 49 50 51 52 53 54 55
 
 / {
-    /* trackball as cursor — auto-activates Nav layer on movement */
+    /* trackball as cursor on base and nav layers */
 
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&trackball>;
-        layers = <Base>;
+        layers = <0 1 4>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <1>;
         scale-divisor = <1>;
-        bindings = <&ib_tog_nav 4>;
-    };
-
-    /* keep trackball working as cursor on the Nav layer itself */
-
-    trackball_nav_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&trackball>;
-        layers = <4>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-        scale-multiplier = <1>;
-        scale-divisor = <1>;
-    };
-
-    /* trackball slowed down on mouse layer (snipe) */
-
-    trackball_snipe_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&trackball>;
-        layers = <Mouse>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-        scale-multiplier = <1>;
-        scale-divisor = <4>;
-    };
-
-    /* trackball as scroll wheel on scroll layer */
-
-    trackball_scroll_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&trackball>;
-        layers = <Scroll>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_MISC>;
-        y-input-code = <INPUT_REL_WHEEL>;
-        y-invert;
-        bindings = <&ib_wheel_scaler 1 14>;
     };
 
     ib_wheel_scaler: ib_wheel_scaler {
@@ -74,12 +34,6 @@
         #binding-cells = <2>;
         evt-type = <INPUT_EV_REL>;
         input-code = <INPUT_REL_WHEEL>;
-    };
-
-    ib_tog_nav: ib_tog_nav {
-        compatible = "zmk,input-behavior-tog-layer";
-        #binding-cells = <1>;
-        time-to-live-ms = <750>;
     };
 
     macros {
