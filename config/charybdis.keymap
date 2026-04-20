@@ -1,6 +1,7 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -146,34 +147,34 @@
         Base {
             label = "BASE";
             bindings = <
-&kp ESC           &kp N1  &kp N2  &kp N3     &kp N4                          &kp N5       &kp N6                              &kp N7       &kp N8     &kp N9   &kp N0                   &kp BACKSPACE
-&kp TAB           &kp Q   &kp W   &kp E      &kp R                           &kp T        &kp Y                               &kp U        &kp I      &kp O    &kp P                    &kp GRAVE
-&kp BACKSPACE     &kp A   &kp S   &kp D      &kp F                           &kp G        &kp H                               &kp J        &kp K      &kp L    &hmr LEFT_ALT SEMI       &kp ENTER
-&kp LEFT_CONTROL  &kp Z   &kp X   &kp C      &kp V                           &kp B        &kp N                               &kp M        &kp COMMA  &kp DOT  &hmr LS(LEFT_ALT) SLASH  &kp LEFT_SHIFT
-                                  &sl 1  &kp SPACE  &mkp RCLK    &sk LEFT_GUI          &sl 3
-                                             &sk LEFT_SHIFT                       &mkp LCLK    &sk LEFT_CONTROL
+&kp ESC           &kp N1  &kp N2  &kp N3  &kp N4          &kp N5       &kp N6            &kp N7  &kp N8     &kp N9   &kp N0                   &kp BACKSPACE
+&kp TAB           &kp Q   &kp W   &kp E   &kp R           &kp T        &kp Y             &kp U   &kp I      &kp O    &kp P                    &kp GRAVE
+&kp BACKSPACE     &kp A   &kp S   &kp D   &kp F           &kp G        &kp H             &kp J   &kp K      &kp L    &hmr LEFT_ALT SEMI       &kp ENTER
+&kp LEFT_CONTROL  &kp Z   &kp X   &kp C   &kp V           &kp B        &kp N             &kp M   &kp COMMA  &kp DOT  &hmr LS(LEFT_ALT) SLASH  &kp LEFT_SHIFT
+                                  &sl 1   &kp SPACE       &mkp RCLK    &sk LEFT_GUI      &sl 3
+                                          &sk LEFT_SHIFT  &mkp LCLK    &sk LEFT_CONTROL
             >;
         };
 
         Nav {
             bindings = <
-&kp F1      &kp F2     &kp F3  &kp F4     &kp F5      &kp F6            &kp F7                          &kp F8       &kp F9         &kp F10        &kp F11        &kp F12
-&kp TAB     &sk LCTRL  &kp N1  &kp N2     &kp N3      &none             &sk LSHFT                       &sk LCTRL    &kp LG(EQUAL)  &kp LG(MINUS)  &none          &none
-&kp BSPC    &sk LALT   &kp N4  &kp N5     &kp N6      &sk LEFT_SHIFT    &kp LEFT                        &kp DOWN     &kp UP         &kp RIGHT      &kp PAGE_UP    &kp ENTER
-&kp DELETE  &sk LGUI   &kp N7  &kp N8     &kp N9      &kp N0            &kp HOME                        &kp END      &none          &none          &kp PAGE_DOWN  &kp PRINTSCREEN
-                               &kp SPACE  &none       &none             &tog 0                          &sl 2
+&kp F1      &kp F2     &kp F3  &kp F4     &kp F5      &kp F6            &kp F7          &kp F8     &kp F9         &kp F10        &kp F11        &kp F12
+&kp TAB     &sk LCTRL  &kp N1  &kp N2     &kp N3      &none             &sk LSHFT       &sk LCTRL  &kp LG(EQUAL)  &kp LG(MINUS)  &none          &none
+&kp BSPC    &sk LALT   &kp N4  &kp N5     &kp N6      &sk LEFT_SHIFT    &kp LEFT        &kp DOWN   &kp UP         &kp RIGHT      &kp PAGE_UP    &kp ENTER
+&kp DELETE  &sk LGUI   &kp N7  &kp N8     &kp N9      &kp N0            &kp HOME        &kp END    &none          &none          &kp PAGE_DOWN  &kp PRINTSCREEN
+                               &kp SPACE  &none       &none             &tog 0          &sl 2
                                           &kp ESCAPE  &none             &sk LEFT_SHIFT
             >;
         };
 
         Media {
             bindings = <
-&none  &none             &none           &none       &none            &none                &none   &none  &none  &none  &none  &none
-&none  &none             &none           &none       &none            &none                &none   &none  &none  &none  &none  &none
-&none  &kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN    &none   &none  &none  &none  &none  &none
-&to 0  &none             &none           &none       &none            &kp C_MUTE           &none   &none  &none  &none  &none  &none
-                                         &none       &none            &none                &tog 0  &none
-                                                     &none            &none                &none
+&none  &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4       &none   &none  &none  &none  &none  &none
+&none  &none             &none           &none         &none              &none              &none   &none  &none  &none  &none  &none
+&none  &kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &none   &none  &none  &none  &none  &none
+&to 0  &none             &none           &none         &none              &kp C_MUTE         &none   &none  &none  &none  &none  &bt BT_CLR_ALL
+                                         &none         &none              &none              &tog 0  &none
+                                                       &none              &none              &none
             >;
         };
 
