@@ -152,24 +152,24 @@
 
         media {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
+&none  &none             &none           &none       &none            &none                &none   &none  &none  &none  &none  &none
+&none  &none             &none           &none       &none            &none                &none   &none  &none  &none  &none  &none
+&none  &kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN    &none   &none  &none  &none  &none  &none
+&to 0  &none             &none           &none       &none            &kp C_MUTE           &none   &none  &none  &none  &none  &none
+                                         &none       &none            &none                &tog 0  &none
+                                                     &none            &none                &none
             >;
         };
 
         Symbols {
             label = "SYM";
             bindings = <
-&trans  &kp GRAVE       &kp TILDE        &trans                &trans                 &trans       &trans         &trans           &trans        &trans     &trans        &trans
-&trans  &kp LESS_THAN   &kp PIPE         &kp MINUS             &kp GREATER_THAN       &kp UNDER    &single_arrow  &kp AMPERSAND    &kp ASTERISK  &kp PLUS   &kp COLON     &kp GRAVE
-&trans  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &double_arrow  &kp DOLLAR       &kp PERCENT   &kp CARET  &kp SEMI      &kp DEL
-&trans  &elixir_pipe    &kp BSLH         &kp LBKT              &kp RBKT               &kp FSLH     &not_equals    &kp EXCLAMATION  &kp AT        &kp HASH   &kp QUESTION  &kp SQT
-                                         &trans                &trans                 &trans       &trans         &trans
-                                                               &trans                 &trans       &trans
+&none             &kp GRAVE       &kp TILDE             &none                  &none             &none                &none          &none         &none          &none     &none        &none
+&kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE   &kp RIGHT_BRACKET    &kp TILDE      &kp TILDE     &kp EQUAL      &kp PLUS  &kp GRAVE    &none
+&kp HASH          &kp CARET       &kp SINGLE_QUOTE      &kp DOUBLE_QUOTES      &kp DOLLAR        &kp STAR             &double_arrow  &kp LC(B)     &kp AMPERSAND  &kp PIPE  &kp COLON    &none
+&kp PERCENT       &kp LESS_THAN   &kp UNDERSCORE        &kp MINUS              &kp GREATER_THAN  &kp FSLH             &kp BACKSLASH  &kp QUESTION  &none          &none     &kp AT_SIGN  &none
+                                                        &kp SPACE              &kp EXCLAMATION   &none                &tog 0         &none
+                                                                               &kp ESCAPE        &none                &none
             >;
         };
 
