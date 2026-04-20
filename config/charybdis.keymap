@@ -28,7 +28,7 @@
         scale-multiplier = <1>;
         scale-divisor = <2>;
     };
-––
+
     trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&trackball>;
@@ -129,7 +129,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             bindings = <&sk>, <&kp>;
-        }
+        };
     };
 
     keymap {
