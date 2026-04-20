@@ -39,7 +39,7 @@
         scale-multiplier = <1>;
         scale-divisor = <8>;
         y-invert;
-        bindings = <&ib_wheel_scaler 1 28>;
+        bindings = <&ib_wheel_scaler 1 20>;
     };
 
     ib_wheel_scaler: ib_wheel_scaler {
