@@ -49,43 +49,6 @@
         input-code = <INPUT_REL_WHEEL>;
     };
 
-    macros {
-        vim_write: vim_write {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp COLON &kp W &kp ENTER>;
-            label = "VIM_WRITE";
-        };
-
-        single_arrow: single_arrow {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp MINUS &kp GREATER_THAN>;
-            label = "SINGLE_ARROW";
-        };
-
-        double_arrow: double_arrow {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp GREATER_THAN>;
-            label = "DOUBLE_ARROW";
-        };
-
-        elixir_pipe: elixir_pipe {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp PIPE &kp GREATER_THAN>;
-            label = "ELIXIR_PIPE";
-        };
-
-        not_equals: not_equals {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp EXCLAMATION &kp EQUAL>;
-            label = "NOT_EQUALS";
-        };
-    };
-
     behaviors {
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
