@@ -37,7 +37,7 @@
         device = <&trackball>;
         layers = <Nav>;
         evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_HWHEEL>;
+        x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
         scale-multiplier = <1>;
         scale-divisor = <8>;
@@ -57,7 +57,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <180>;
             quick-tap-ms = <140>;
             require-prior-idle-ms = <130>;
             bindings = <&kp>, <&kp>;
@@ -70,7 +70,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <180>;
             quick-tap-ms = <140>;
             require-prior-idle-ms = <130>;
             bindings = <&kp>, <&kp>;
