@@ -109,6 +109,7 @@
         hmr_shift: hmr_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "HMR_SHIFT";
+            bindings = <&kp>, <&kp>;
             flavor = "tap-preferred";
 
             #binding-cells = <2>;
