@@ -111,9 +111,9 @@
             label = "HMR_SHIFT";
             bindings = <&kp>, <&kp>;
 
-            flavor = "balanced";
+            flavor = "tap-preferred";
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <125>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             quick-tap-ms = <175>;
@@ -124,9 +124,9 @@
             label = "HML_SHIFT";
             bindings = <&kp>, <&kp>;
 
-            flavor = "balanced";
+            flavor = "tap-preferred";
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <125>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
             quick-tap-ms = <175>;
