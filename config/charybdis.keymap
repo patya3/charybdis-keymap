@@ -144,7 +144,7 @@
 &kp BACKSPACE   &kp A   &kp S                &kp D   &kp F      &kp G             &kp H             &kp J   &kp K        &kp L              &hmr LEFT_ALT SEMI       &kp ENTER
 &sk LEFT_SHIFT  &kp Z   &hml LEFT_CONTROL X  &kp C   &kp V      &kp B             &kp N             &kp M   &lt 1 COMMA  &hmr RCTRL PERIOD  &hmr LS(LEFT_ALT) SLASH  &sk RIGHT_SHIFT
                                              &mo 1   &kp SPACE  &sk LEFT_SHIFT    &sk LEFT_COMMAND  &mo 3
-                                                     &mkp LCLK  &kp LEFT_SHIFT    &sk RIGHT_SHIFT
+                                                     &mkp LCLK  &sk LEFT_SHIFT    &sk RIGHT_SHIFT
             >;
         };
 
