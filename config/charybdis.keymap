@@ -151,9 +151,9 @@
         Nav {
             bindings = <
 &kp F1      &kp F2     &kp F3  &kp F4      &kp F5      &kp F6            &kp F7          &kp F8     &kp F9         &kp F10        &kp F11        &kp F12
-&kp TAB     &sk LCTRL  &kp N1  &kp N2      &kp N3      &none             &sk LSHFT       &sk LCTRL  &kp LG(EQUAL)  &kp LG(MINUS)  &none          &none
-&kp BSPC    &sk LALT   &kp N4  &kp N5      &kp N6      &sk LEFT_SHIFT    &kp LEFT        &kp DOWN   &kp UP         &kp RIGHT      &kp PAGE_UP    &kp ENTER
-&kp DELETE  &sk LGUI   &kp N7  &kp N8      &kp N9      &kp N0            &kp HOME        &kp END    &none          &none          &kp PAGE_DOWN  &kp PRINTSCREEN
+&kp TAB     &kp LCTRL  &kp N1  &kp N2      &kp N3      &none             &sk LSHFT       &sk LCTRL  &kp LG(EQUAL)  &kp LG(MINUS)  &none          &none
+&kp BSPC    &kp LALT   &kp N4  &kp N5      &kp N6      &kp LEFT_SHIFT    &kp LEFT        &kp DOWN   &kp UP         &kp RIGHT      &kp PAGE_UP    &kp ENTER
+&kp DELETE  &kp LGUI   &kp N7  &kp N8      &kp N9      &kp N0            &kp HOME        &kp END    &none          &none          &kp PAGE_DOWN  &kp PRINTSCREEN
                                &kp ESCAPE  &kp SPACE   &none             &tog 0          &sl 2
                                            &kp ESCAPE  &none             &sk LEFT_SHIFT
             >;
